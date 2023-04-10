@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary: #fff;
+    --secondary: #36454f;
+    --textcolor: #ff2400;
+}
+.switch{
+    --primary: #36454f;
+    --secondary: #fff;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--primary);
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px;
+    z-index: 222;
+}
+.logo{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--secondary);
+}
+.logo b{
+    color: var(--textcolor)
+}
+ul{
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: right;
+    margin-right: 100px;
+}
+ul li{
+    margin: 0 20px
+}
+ul li a{
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1;
+    color: var(--secondary);
+}
+ul li:hover a{
+    color: var(--textcolor);
+}
+.row{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 116px);
+}
+.cols{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+.textdata h2{
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--secondary);
+    z-index: 1111;
+}
+.textdata h2 span{
+    color: var(--textcolor);
+    font-weight: 900;
+}
+.textdata h3{
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 10px 0;
+}
+.textdata p{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary);
+    margin: 10px 0;
+}
+.textdata btn{
+    width: 100%;
+    margin-top: 20px;
+}
+.btn button{
+    border: none;
+    background: var(--textcolor);
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.btn button:hover{
+    transition: 0.3s ease;
+    padding: 10px 40px;
+}
+.sociallinks{
+    position: absolute;
+    bottom: 100px;
+}
+.sociallinks i{
+    font-size: 2.2em;
+    margin: 0 10px;
+    cursor: pointer;
+    color: var(--secondary);
+    transition: 0.2s ease;
+}
+.sociallinks i:hover{
+    font-size: 3.4em;
+    color: var(--textcolor);
+}
+.imagedata{
+    overflow: hidden;
+}
+.imgbox{
+    position: relative;
+    width: 800px;
+    top: -50px;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+.imgbox img{
+    width: 100%;
+}
+.imagedata:hover .imgbox{
+    transform: translateX(-10px);
+}
+.imagedata .pattern{
+    position: absolute;
+    background: url('img');
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    right: 40px;
+    top: 50px;
+    transition: 0.3s ease;
+}
+.imagedata:hover .pattern{
+    transform: translate(20px, -10px) scale(0.95)
+}
+.toggleSwitch{
+    position: relative;
+}
+.toggleSwitch .fa{
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.fa-sun{
+    display: none;
+    color: #fff;
+}
+.switch .fa-sun{
+    display: block;
+}
+.switch .fa-moon{
+    display: none;
+}
+/* ------------------------------ common styles about section --------------------------------- */
+.about{
+    background: #36454f;
+}
+.main{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    /* background: #394953; */
+}
+.main h2{
+    font-size: 2.5vw;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+    color: whitesmoke;
+}
+span{
+    color: var(--textcolor);
+}
+.main h2:before{
+    position: absolute;
+    content: '';
+    background: var(--textcolor);
+    height: 4px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+}
+.main h6{
+    margin-top: 10px;
+    font-size: 17px;
+    /* font-family: sans-serif; */
+    font-weight: lighter;
+    color: whitesmoke;
+}
+.content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: center;
+    color: whitesmoke
+}
+/* ------------------------------ styles about section --------------------------------- */
+.about .content .cols {
+    top: 30px;
+    left: 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+}
+.about .content .cols p{
+    top: 30px;
+    left: 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+    justify-content: left;
+    font-size: 20px;
+}
+.about .content .cols p b{
+    font-size: 25px;
+    margin-right: 2px;
+}
+/* .about .content .cols a{ 
+    position: relative;
+    top: 20px;
+    color: #fff;
+    background: var(--textcolor);
+    padding: 1px 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.about .content .cols a:hover{
+    color: #000;
+    background: #fff;
+} */
+.about .content .cols .box{
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.about .content .cols .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* ------------------------------- style skills section ----------------------------------- */
+.skills{
+    background: #36454f;
+}
+.skills .content{
+    flex-wrap: wrap;
+}
+.skills .content .frame{
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    background: #222;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.skills .content .frame .box{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.skills .content .frame .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+    transition: 0.2s ease-in;
+}
+.skills .content .frame .box:hover img{
+    filter: brightness(100%);
+    transform: scale(1.08);
+}
+
+.skills .content .frame p{
+    font-size: 0.8em;
+    /* font-style: italic; */
+}
+
+.skills .content .frame p a{ 
+    position: relative;
+    top: 50px;
+    color: #fff;
+    background: var(--textcolor);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.skills .content .frame p a:hover{
+    color: #000;
+    background: #fff;
+}
+.blog{
+    background: #36454f;
+}
